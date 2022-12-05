@@ -16,9 +16,8 @@ class UserTest extends TestCase
      */
     public function test_example()
     {
-        $response = Kategori::craete([
-            'Nama' => 'test',
-        ]);
-        $this->assertTrue(true);
+        $response = $this->get('kategori');
+
+        $response->assertStatus(200);
     }
 }
